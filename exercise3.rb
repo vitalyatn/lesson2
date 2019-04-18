@@ -1,15 +1,7 @@
 
 fib = [0, 1]
-index = 1
-while fib.last < 100
-	fib.push(fib[index] + fib[index-1])
-	if fib.last > 100
-		fib.pop
-		break
-	end
-	index += 1
+while (result = fib[-1] + fib[-2]) < 100
+  fib.push(result)
 end
 
 fib.each  {| index | puts index } #вывод элементов массива
-
-

@@ -1,8 +1,8 @@
 
-purchases = Hash.new
+purchases = {}
 sum_of_product = 0
 total_sum = 0
-loop do 
+loop do
   puts "Введите название товара"
   title = gets.chomp
   break if title == "стоп"
@@ -10,7 +10,7 @@ loop do
   price = gets.chomp.to_f
   puts "Введите количество купленного товара"
   number = gets.chomp.to_f
-  purchases[title.to_sym] = {price => number}
+  purchases[title] = {price => number}
 end
 
 purchases.each do |title, price_and_number|
